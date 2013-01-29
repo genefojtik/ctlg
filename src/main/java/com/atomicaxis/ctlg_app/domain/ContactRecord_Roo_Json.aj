@@ -5,16 +5,11 @@ package com.atomicaxis.ctlg_app.domain;
 
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import flexjson.JSONDeserializer;
-import flexjson.JSONSerializer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 privileged aspect ContactRecord_Roo_Json {
-    
-    public String ContactRecord.toJson() {
-        return new JSONSerializer().exclude("*.class").serialize(this);
-    }
     
     public static ContactRecord ContactRecord.fromJsonToContactRecord(String json) {
         return new JSONDeserializer<ContactRecord>().use(null, ContactRecord.class).deserialize(json);

@@ -76,4 +76,8 @@ public class ContactRecord {
 	public static String toJsonArray(Collection<ContactRecord> collection) {
         return new JSONSerializer().exclude("*.class").deepSerialize(collection);
     }
+
+	public String toJson() {
+        return new JSONSerializer().exclude("*.class").deepSerialize(this);
+    }
 }
