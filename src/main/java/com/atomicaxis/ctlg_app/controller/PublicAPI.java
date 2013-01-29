@@ -39,9 +39,6 @@ public class PublicAPI {
     public ResponseEntity<String> getContactRecord(){
     	HttpHeaders headers = new HttpHeaders();
     	List<ContactRecord> result = ContactRecord.findAllContactRecords();
-    	System.out.println(result);
-    	//return JSONSerializer().exclude("*.class").serialize(result);
-    
 		return new ResponseEntity<String>(ContactRecord.toJsonArray(result), HttpStatus.OK);
     }
     
