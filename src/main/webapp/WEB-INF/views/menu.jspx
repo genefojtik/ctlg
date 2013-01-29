@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_contactrecord" z="s3kz5z38S4opIoXnO81DwvVt0wY=">
+            <menu:item id="i_contactrecord_new" messageCode="global_menu_new" url="/contactrecords?form" z="ZoEkmchPWwpzNJpI7bYU1o25mbU="/>
+            <menu:item id="i_contactrecord_list" messageCode="global_menu_list" url="/contactrecords?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0ndw8UTz9zFSYYXITwKLh1RBuoM="/>
+        </menu:category>
+        <menu:category id="c_actionplan" z="bOgnVgi8Rqymn12CzQd2Yh75bFk=">
+            <menu:item id="i_actionplan_new" messageCode="global_menu_new" url="/actionplans?form" z="nxIc01E1JocjR9UfSfZraDHj2A0="/>
+            <menu:item id="i_actionplan_list" messageCode="global_menu_list" url="/actionplans?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QUZqMENHu9jjKBhcoINDbEdUEfs="/>
+        </menu:category>
+        <menu:category id="c_note" z="9h2hsuneSrocx9jL7zHkTKVuHy8=">
+            <menu:item id="i_note_new" messageCode="global_menu_new" url="/notes?form" z="oYBQPPA8gC477hQQZwvFgzKbD6o="/>
+            <menu:item id="i_note_list" messageCode="global_menu_list" url="/notes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="FTO+GmUarl6QwFawad+RFkRN43I="/>
+        </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__serviceindex_id" messageCode="global_generic" url="/service/index" z="xmhk9ZyHXHn6oUfRhxOd26kZUQQ="/>
+        </menu:category>
+    </menu:menu>
+</div>

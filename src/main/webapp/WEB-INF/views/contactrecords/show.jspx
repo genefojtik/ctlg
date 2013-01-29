@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atomicaxis_ctlg_app_domain_ContactRecord" object="${contactrecord}" path="/contactrecords" z="Jg5wCSJYfZKSyOBQAHYroxir5nU=">
+        <field:display field="name" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_name" object="${contactrecord}" z="X5qMXWXKw/qjRZgBxGlNjhe5w6A="/>
+        <field:display field="firstName" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_firstName" object="${contactrecord}" z="v8BK5N0NwlLO7fNPS+8duTiy1iQ="/>
+        <field:display field="lastName" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_lastName" object="${contactrecord}" z="B8l5DfF5Vwh7JdWO17O01+guh5Q="/>
+        <field:display field="partnerFirstName" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerFirstName" object="${contactrecord}" z="5FNdK67vvn0lToNR7C77kVQuowM="/>
+        <field:display field="partnerLastName" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerLastName" object="${contactrecord}" z="a2wlAEsLIInD4zzn1Ag0qzVVXrU="/>
+        <field:display field="firstPersonEmailAddress" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_firstPersonEmailAddress" object="${contactrecord}" z="HWS3ab3lY+qmFQ/m398mLvQNFDU="/>
+        <field:display field="partnerEmailAddress" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerEmailAddress" object="${contactrecord}" z="hFqvHbpdhGRiRoBhmRrsiBlt4DI="/>
+        <field:display field="cellPhone" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_cellPhone" object="${contactrecord}" z="JDniVm61ileDa7DyiwSLxFphWV8="/>
+        <field:display field="homePhone" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_homePhone" object="${contactrecord}" z="dwS48QtzGeYJ7wzuzd9y1ZN3K54="/>
+        <field:display field="workPhone" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_workPhone" object="${contactrecord}" z="W/jaHhnvcrsNEHPUigXnH0Np0kA="/>
+        <field:display field="addressLine1" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_addressLine1" object="${contactrecord}" z="A4EWa95mH7ldVFy/ViojX6i5mpk="/>
+        <field:display field="city" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_city" object="${contactrecord}" z="lVJBveFD52N7NPWZ11Qn4Aw3IBs="/>
+        <field:display field="state" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_state" object="${contactrecord}" z="D0qVlqnM+mNzZj1OXtIT6kfJqk4="/>
+        <field:display field="zip" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_zip" object="${contactrecord}" z="r3X6aP1r6pzFPSAm6zNvvqnMQfc="/>
+        <field:display field="status" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_status" object="${contactrecord}" z="7njU2wTcr5P64jhZYyjeSrwrd1I="/>
+        <field:display field="leadSource" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_leadSource" object="${contactrecord}" z="pU964Q4p0Wu4TSZseTC8zmjTGQ0="/>
+    </page:show>
+</div>

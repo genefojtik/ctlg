@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atomicaxis_ctlg_app_domain_Note" object="${note}" path="/notes" z="1nzm/k4ZiH4wW6i0qknnkH/Gn/8=">
+        <field:display field="noteText" id="s_com_atomicaxis_ctlg_app_domain_Note_noteText" object="${note}" z="MnKAtkpGsRDiu3OluKvAdOYqJV0="/>
+        <field:display field="author" id="s_com_atomicaxis_ctlg_app_domain_Note_author" object="${note}" z="FO0vgFsTJh/W6SVuurpeKHdMcnA="/>
+        <field:display date="true" dateTimePattern="${note_createdatetime_date_format}" field="createDateTime" id="s_com_atomicaxis_ctlg_app_domain_Note_createDateTime" object="${note}" z="rCljs7ySdV9y2Hu2QBiCqLcUj1g="/>
+        <field:display field="contactRecord" id="s_com_atomicaxis_ctlg_app_domain_Note_contactRecord" object="${note}" z="cbaSu0MyxwcFN7LLLZENVpWI2BI="/>
+    </page:show>
+</div>

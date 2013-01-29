@@ -1,0 +1,57 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-28 16:44:21
+project --topLevelPackage com.atomicaxis.ctlg_app --projectName CTLG_app --java 6 --packaging JAR
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-28 16:44:28
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-28 16:44:31
+persistence setup --provider HIBERNATE --database MYSQL --hostName localhost --databaseName ctlg --userName root --password atomic
+entity jpa --class ~.domain.ContactRecord --testAutomatically true
+entity jpa --class ~.domain.ActionPlan --testAutomatically true
+entity jpa --class ~.domain.MarketingData --testAutomatically true
+focus --class ~.domain.ContactRecord
+field string --fieldName firstName --notNull true --sizeMin 2 --sizeMax 30
+field string --fieldName lastName --notNull true --sizeMin 2 --sizeMax 30
+field string --fieldName partnerFirstName --notNull true --sizeMin 2 --sizeMax 30
+field string --fieldName partnerLastName --notNull true --sizeMin 2 --sizeMax 30
+field string --fieldName firstPersonEmailAddress --notNull true --sizeMin 2 --sizeMax 30
+field string --fieldName partnerEmailAddress --notNull true --sizeMin 2 --sizeMax 30
+field string --fieldName cellPhone --notNull true --sizeMin 7 --sizeMax 30
+field string --fieldName homePhone --notNull true --sizeMin 7 --sizeMax 30
+field string --fieldName workPhone --notNull true --sizeMin 7 --sizeMax 30
+field string --fieldName addressLine1 --notNull true --sizeMin 7 --sizeMax 30
+field string --fieldName city --notNull true --sizeMin 7 --sizeMax 30
+// [failed] field string --fieldName state --notNull true --sizeMin 7 --sizeMax 30
+field string --fieldName state --notNull true --sizeMin 7 --sizeMax 30 --permitReservedWords
+field number --fieldName zip --notNull true --type java.lang.Long
+field string --fieldName leadSource --notNull true --sizeMin 7 --sizeMax 30 --permitReservedWords
+field string --fieldName status --notNull true --sizeMin 7 --sizeMax 30 --permitReservedWords
+json all 
+field set --fieldName actionPlan --type ~.domain.ActionPlan --cardinality ONE_TO_MANY 
+entity jpa --class ~.domain.Note --testAutomatically true
+field string --fieldName noteText --notNull true
+field string --fieldName author --notNull true
+field date --fieldName createDateTime --type java.util.Date --notNull true
+focus --class ~.domain.ContactRecord
+field set --fieldName notes --type ~.domain.Note --cardinality ONE_TO_MANY 
+field reference --fieldName contactRecord --type ~.domain.ContactRecord --class ~.domain.Note --cardinality MANY_TO_ONE 
+field reference --fieldName contactRecord --type ~.domain.ContactRecord --class ~.domain.ActionPlan --cardinality MANY_TO_ONE 
+web mvc setup
+web mvc json all 
+web mvc all --package ~.web
+perform tests
+enum type --class ~.common.LeadSource
+enum constant --name SOI
+enum constant --name OPEN_HOUSE
+enum constant --name BOOMTOWN
+enum constant --name GRE
+// [failed] enum constant --name SOI
+enum type --class ~.common.Status
+enum constant --name ACTIVE
+enum constant --name CLOSED
+enum constant --name CLOSED_CONVERTED
+enum constant --name CLOSED_INACTIVE
+focus --class ~.domain.ContactRecord
+field enum --fieldName status --type ~.common.Status
+field enum --fieldName leadSource --type ~.common.LeadSource
+web mvc all --package ~.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-28 18:30:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-28 18:30:52
+controller class --class ~.controller.PublicAPI --preferredMapping /service

@@ -1,0 +1,12 @@
+2013-01-28 18:15:40,951 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: alter table action_plan drop foreign key FK5E643792D776B2A2
+2013-01-28 18:15:40,952 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - Table 'ctlg.action_plan' doesn't exist
+2013-01-28 18:15:40,952 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: alter table contact_record_action_plan drop foreign key FK954D7F23D776B2A2
+2013-01-28 18:15:40,953 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - Table 'ctlg.contact_record_action_plan' doesn't exist
+2013-01-28 18:15:40,953 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: alter table contact_record_action_plan drop foreign key FK954D7F2354F05CF0
+2013-01-28 18:15:40,953 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - Table 'ctlg.contact_record_action_plan' doesn't exist
+2013-01-28 18:15:40,954 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: alter table contact_record_notes drop foreign key FK5958D712D776B2A2
+2013-01-28 18:15:40,954 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - Table 'ctlg.contact_record_notes' doesn't exist
+2013-01-28 18:15:40,954 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: alter table contact_record_notes drop foreign key FK5958D712F5E04D2
+2013-01-28 18:15:40,954 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - Table 'ctlg.contact_record_notes' doesn't exist
+2013-01-28 18:15:40,954 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: alter table note drop foreign key FK33AFF2D776B2A2
+2013-01-28 18:15:40,954 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaExport - Table 'ctlg.note' doesn't exist

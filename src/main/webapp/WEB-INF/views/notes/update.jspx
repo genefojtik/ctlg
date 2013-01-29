@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_atomicaxis_ctlg_app_domain_Note" modelAttribute="note" path="/notes" versionField="Version" z="6mcPVBA5zJ5tTtc069Mek4X82m0=">
+        <field:input field="noteText" id="c_com_atomicaxis_ctlg_app_domain_Note_noteText" required="true" z="+h9f/tBLonwyAaMFBVc98YTsB1E="/>
+        <field:input field="author" id="c_com_atomicaxis_ctlg_app_domain_Note_author" required="true" z="U6wyoCXsWhaBdi0TpTY29mub4VM="/>
+        <field:datetime dateTimePattern="${note_createdatetime_date_format}" field="createDateTime" id="c_com_atomicaxis_ctlg_app_domain_Note_createDateTime" required="true" z="x+ZPx7pF7OIpRHLjbsCXaM0+WYY="/>
+        <field:select field="contactRecord" id="c_com_atomicaxis_ctlg_app_domain_Note_contactRecord" itemValue="id" items="${contactrecords}" path="/contactrecords" z="KXF6oV7jw0YmMYHXnbQfO0eb2RQ="/>
+    </form:update>
+</div>

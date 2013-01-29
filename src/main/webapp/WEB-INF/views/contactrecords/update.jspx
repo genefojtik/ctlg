@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_atomicaxis_ctlg_app_domain_ContactRecord" modelAttribute="contactRecord" path="/contactrecords" versionField="Version" z="x37BUVyvdu9U4KGCL/HSll8gqFQ=">
+        <field:input field="name" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_name" z="tFoJCtDnXn03btotYJyvIK8dC1c="/>
+        <field:input field="firstName" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_firstName" max="30" min="2" required="true" z="DHDhWKF77EH+b2oIyVeKkY9dN9o="/>
+        <field:input field="lastName" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_lastName" max="30" min="2" required="true" z="1HTqM7XPLlt2DUVAhEG9u6XfDrs="/>
+        <field:input field="partnerFirstName" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerFirstName" z="tUrYqxrOsv+EV5q6U+54QXJplfc="/>
+        <field:input field="partnerLastName" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerLastName" z="a4jGMAtkDK4cvWJPjEPixfVlMw8="/>
+        <field:input field="firstPersonEmailAddress" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_firstPersonEmailAddress" z="DCLjWvt6abNHXOtrUySCh9SPhGk="/>
+        <field:input field="partnerEmailAddress" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerEmailAddress" z="GF4HX2TfFUy4Oypjga9bs5I75uw="/>
+        <field:input field="cellPhone" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_cellPhone" z="UfEom9UDOUxBPsPJCLuHf24KMuU="/>
+        <field:input field="homePhone" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_homePhone" z="m+JI0Bf6rruK8OXZ+G1n3xn5wqc="/>
+        <field:input field="workPhone" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_workPhone" z="i3EX3riX3z2EVTxZjno4yLu9nZ4="/>
+        <field:input field="addressLine1" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_addressLine1" z="JryhHdmYQho56jHE1NUXD39NKlo="/>
+        <field:input field="city" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_city" z="aqn5avTOg4bvS2GzwH8TElzhrq0="/>
+        <field:input field="state" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_state" z="sPQgPPbP3QVGNUYwLyXQ5o12KhQ="/>
+        <field:input field="zip" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_zip" validationMessageCode="field_invalid_integer" z="WszSb+O6gyLxQZ6RSdnV8B61Inc="/>
+        <field:simple field="notes" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_notes" messageCode="entity_reference_not_managed" messageCodeAttribute="Note" z="D3f33l5faSXxEmkDbngvPuQ2DWk="/>
+        <field:select field="status" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_status" items="${statuses}" path="statuses" z="x0BwOpREoIAAfDgwekJhYxYR+jA="/>
+        <field:select field="leadSource" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_leadSource" items="${leadsources}" path="leadsources" z="WZMSVTxHKxILYmdAArZxYCf9ubg="/>
+        <field:simple field="actionPlans" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_actionPlans" messageCode="entity_reference_not_managed" messageCodeAttribute="Action Plan" z="zbHeMOSoesQHLz8xkl5RytOBeOM="/>
+    </form:update>
+</div>

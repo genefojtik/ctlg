@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atomicaxis_ctlg_app_domain_Note" items="${notes}" z="VD+bEgaXeaA0ybM/+ZlSwYXF8d4=">
+        <table:table data="${notes}" id="l_com_atomicaxis_ctlg_app_domain_Note" path="/notes" z="5A5nfylM1D+1zzlSMTaP444x1h4=">
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_Note_noteText" property="noteText" z="PtKWqzRqptvGow3TfaIiebrM6Gw="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_Note_author" property="author" z="HKuNQoey/Z5ruf2Zts4SEz1BZa8="/>
+            <table:column date="true" dateTimePattern="${note_createdatetime_date_format}" id="c_com_atomicaxis_ctlg_app_domain_Note_createDateTime" property="createDateTime" z="UdqUIb+Q1+5DzVhWgI1+5PFB0Z4="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_Note_contactRecord" property="contactRecord" z="awC1P69VCQET9PA1ZQVbBUBPyq0="/>
+        </table:table>
+    </page:list>
+</div>

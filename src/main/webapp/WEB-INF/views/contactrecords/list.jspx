@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atomicaxis_ctlg_app_domain_ContactRecord" items="${contactrecords}" z="bXYHoRU7oD+xQ02SE7+bFTWNu54=">
+        <table:table data="${contactrecords}" id="l_com_atomicaxis_ctlg_app_domain_ContactRecord" path="/contactrecords" z="9As24Hgxuo8ZtHclLrfw8tAzX54=">
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_name" property="name" z="1wJldwt4+EIYAzA3yQLOhxSCQ54="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_firstName" property="firstName" z="TKsNtDdxdo7JUNk3l5MpxRR7u8Q="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_lastName" property="lastName" z="um1Y0QPNveoBND2W+i+GZHaeNL0="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerFirstName" property="partnerFirstName" z="57vvCenK5OtEOkC2fVhWCNjc724="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_partnerLastName" property="partnerLastName" z="rUrqtVgbegZwtxKG9o+DbPDvNJY="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_firstPersonEmailAddress" property="firstPersonEmailAddress" z="ALiYoCC45dB0DCBHKgMegTPVQ40="/>
+        </table:table>
+    </page:list>
+</div>
