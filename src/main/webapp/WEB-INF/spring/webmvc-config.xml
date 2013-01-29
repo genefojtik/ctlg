@@ -70,7 +70,7 @@
   <bean name="proxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
     <property name="beanNames">
         <list>
-            <value>*Controller</value>            
+            <value>*Controller</value>          
         </list>
     </property>
     <property name="interceptorNames">

@@ -23,7 +23,7 @@ import flexjson.JSONSerializer;
 
 @RequestMapping("/services")
 @Controller
-public class PublicAPI {
+public class PublicApiController {
 
 
     @RequestMapping(method = RequestMethod.POST, value = "{id}")
