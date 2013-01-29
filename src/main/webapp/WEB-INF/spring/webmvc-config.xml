@@ -22,7 +22,14 @@
     <mvc:interceptors>
         <bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor"/>
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang"/>
+        
+		<!--  GFojtik added custom interceptor -->
+        <bean id="loggerInterceptor" class="com.atomicaxis.ctlg_app.interceptor.LoggerInterceptor" />
+    
     </mvc:interceptors>
+    
+    <!--  GFojtik added custom interceptor -->
+    <bean id="performanceInterceptor" class="com.atomicaxis.ctlg_app.interceptor.PerformanceInterceptor" />
 
     <!-- Selects a static view for rendering without the need for an explicit controller -->
     <mvc:view-controller path="/" view-name="index"/>
@@ -57,6 +64,21 @@
             </props>
         </property>
     </bean>
+
+  <!--  GFojtik added custom interceptor -->
+  
+  <bean name="proxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+    <property name="beanNames">
+        <list>
+            <value>*Controller</value>            
+        </list>
+    </property>
+    <property name="interceptorNames">
+        <list>
+            <value>performanceInterceptor</value>
+        </list>
+    </property>
+</bean>
 
     <!-- Enable this for integration of file upload functionality -->
     <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver"/>
