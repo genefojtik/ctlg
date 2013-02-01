@@ -3,8 +3,10 @@
 
 package com.atomicaxis.ctlg_app.domain;
 
+import com.atomicaxis.ctlg_app.common.ActionStatus;
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
+import java.util.Date;
 
 privileged aspect ActionPlan_Roo_JavaBean {
     
@@ -16,12 +18,44 @@ privileged aspect ActionPlan_Roo_JavaBean {
         this.contactRecord = contactRecord;
     }
     
-    public String ActionPlan.getName() {
-        return this.name;
+    public String ActionPlan.getTitle() {
+        return this.title;
     }
     
-    public void ActionPlan.setName(String name) {
-        this.name = name;
+    public void ActionPlan.setTitle(String title) {
+        this.title = title;
+    }
+    
+    public ActionStatus ActionPlan.getStatus() {
+        return this.status;
+    }
+    
+    public void ActionPlan.setStatus(ActionStatus status) {
+        this.status = status;
+    }
+    
+    public Date ActionPlan.getCreated() {
+        return this.created;
+    }
+    
+    public void ActionPlan.setCreated(Date created) {
+        this.created = created;
+    }
+    
+    public Date ActionPlan.getUpdated() {
+        return this.updated;
+    }
+    
+    public void ActionPlan.setUpdated(Date updated) {
+        this.updated = updated;
+    }
+    
+    public Date ActionPlan.getDueDate() {
+        return this.dueDate;
+    }
+    
+    public void ActionPlan.setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
     }
     
 }

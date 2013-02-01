@@ -1,7 +1,7 @@
 package com.atomicaxis.ctlg_app.domain;
 
 import com.atomicaxis.ctlg_app.common.LeadSource;
-import com.atomicaxis.ctlg_app.common.Status;
+import com.atomicaxis.ctlg_app.common.LeadStatus;
 import flexjson.JSONSerializer;
 import java.util.Collection;
 import java.util.HashSet;
@@ -63,7 +63,7 @@ public class ContactRecord {
     private Set<Note> notes = new HashSet<Note>();
 
     @Enumerated
-    private Status status;
+    private LeadStatus status;
 
     @Enumerated
     private LeadSource leadSource;

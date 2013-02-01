@@ -4,7 +4,7 @@
 package com.atomicaxis.ctlg_app.domain;
 
 import com.atomicaxis.ctlg_app.common.LeadSource;
-import com.atomicaxis.ctlg_app.common.Status;
+import com.atomicaxis.ctlg_app.common.LeadStatus;
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import com.atomicaxis.ctlg_app.domain.Note;
@@ -136,11 +136,11 @@ privileged aspect ContactRecord_Roo_JavaBean {
         this.notes = notes;
     }
     
-    public Status ContactRecord.getStatus() {
+    public LeadStatus ContactRecord.getStatus() {
         return this.status;
     }
     
-    public void ContactRecord.setStatus(Status status) {
+    public void ContactRecord.setStatus(LeadStatus status) {
         this.status = status;
     }
     

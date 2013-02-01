@@ -8,8 +8,8 @@
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecordDataOnDemand_Roo_Configurable"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlanIntegrationTest_Roo_Configurable"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlanDataOnDemand_Roo_DataOnDemand"/>
-<aspect name="com.atomicaxis.ctlg_app.domain.ActionPlanIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingDataDataOnDemand_Roo_Configurable"/>
+<aspect name="com.atomicaxis.ctlg_app.domain.ActionPlanIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingDataIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecordIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecordDataOnDemand_Roo_DataOnDemand"/>

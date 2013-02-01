@@ -4,7 +4,7 @@
 package com.atomicaxis.ctlg_app.domain;
 
 import com.atomicaxis.ctlg_app.common.LeadSource;
-import com.atomicaxis.ctlg_app.common.Status;
+import com.atomicaxis.ctlg_app.common.LeadStatus;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import com.atomicaxis.ctlg_app.domain.ContactRecordDataOnDemand;
 import java.security.SecureRandom;
@@ -117,7 +117,7 @@ privileged aspect ContactRecordDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ContactRecordDataOnDemand.setStatus(ContactRecord obj, int index) {
-        Status status = Status.class.getEnumConstants()[0];
+        LeadStatus status = LeadStatus.class.getEnumConstants()[0];
         obj.setStatus(status);
     }
     

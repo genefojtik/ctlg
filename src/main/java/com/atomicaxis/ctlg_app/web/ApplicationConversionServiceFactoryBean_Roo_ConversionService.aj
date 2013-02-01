@@ -19,7 +19,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<ActionPlan, String> ApplicationConversionServiceFactoryBean.getActionPlanToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.atomicaxis.ctlg_app.domain.ActionPlan, java.lang.String>() {
             public String convert(ActionPlan actionPlan) {
-                return new StringBuilder().append(actionPlan.getName()).toString();
+                return new StringBuilder().append(actionPlan.getTitle()).append(' ').append(actionPlan.getCreated()).append(' ').append(actionPlan.getUpdated()).append(' ').append(actionPlan.getDueDate()).toString();
             }
         };
     }

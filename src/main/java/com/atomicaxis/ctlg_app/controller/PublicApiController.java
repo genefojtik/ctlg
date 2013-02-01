@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
@@ -39,9 +40,14 @@ public class PublicApiController {
     @ResponseBody
     public ResponseEntity<String> getContactRecord(){
     	HttpHeaders headers = new HttpHeaders();
+    	headers.add("Access-Control-Allow-Origin", "*");
+    	//headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     	List<ContactRecord> result = ContactRecord.findAllContactRecords();
     	
+    	
+    	
 		return new ResponseEntity<String>(ContactRecord.toJsonArray(result), headers, HttpStatus.OK);
+		
     }
     
     @RequestMapping(value = "/contactrecord/{id}", headers = "Accept=application/json", produces="application/json")
@@ -49,6 +55,8 @@ public class PublicApiController {
     public ResponseEntity<String> getContactRecordByID(@PathVariable("id") Long id){
     	ContactRecord contactRecord = ContactRecord.findContactRecord(id);
         HttpHeaders headers = new HttpHeaders();
+    	headers.add("Access-Control-Allow-Origin", "*");
+    	headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (contactRecord == null) {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
@@ -73,6 +81,18 @@ public class PublicApiController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+    }
+    
+    /* 
+     * 
+     */
+	@RequestMapping(value = "/contactrecord/{id}/actionplans", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> getActionPlansByContactRecordId(@PathVariable("id") Long id) {
+    	ContactRecord contactRecord = ContactRecord.findContactRecord(id);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        return new ResponseEntity<String>(ActionPlan.toJsonArrayShallow(ActionPlan.findActionPlansByContactRecord(contactRecord).getResultList()), headers, HttpStatus.OK);
     }
     
 }

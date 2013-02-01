@@ -4,11 +4,15 @@
 package com.atomicaxis.ctlg_app;
 
 import com.atomicaxis.ctlg_app.ActionPlanController;
+import com.atomicaxis.ctlg_app.common.ActionStatus;
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,6 +43,7 @@ privileged aspect ActionPlanController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String ActionPlanController.show(@PathVariable("id") Long id, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("actionplan", ActionPlan.findActionPlan(id));
         uiModel.addAttribute("itemId", id);
         return "actionplans/show";
@@ -55,6 +60,7 @@ privileged aspect ActionPlanController_Roo_Controller {
         } else {
             uiModel.addAttribute("actionplans", ActionPlan.findAllActionPlans());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "actionplans/list";
     }
     
@@ -85,8 +91,16 @@ privileged aspect ActionPlanController_Roo_Controller {
         return "redirect:/actionplans";
     }
     
+    void ActionPlanController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("actionPlan_created_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("actionPlan_updated_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("actionPlan_duedate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+    }
+    
     void ActionPlanController.populateEditForm(Model uiModel, ActionPlan actionPlan) {
         uiModel.addAttribute("actionPlan", actionPlan);
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("actionstatuses", Arrays.asList(ActionStatus.values()));
         uiModel.addAttribute("contactrecords", ContactRecord.findAllContactRecords());
     }
     

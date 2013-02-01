@@ -5,7 +5,7 @@ package com.atomicaxis.ctlg_app;
 
 import com.atomicaxis.ctlg_app.ContactRecordController;
 import com.atomicaxis.ctlg_app.common.LeadSource;
-import com.atomicaxis.ctlg_app.common.Status;
+import com.atomicaxis.ctlg_app.common.LeadStatus;
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import com.atomicaxis.ctlg_app.domain.Note;
@@ -92,7 +92,7 @@ privileged aspect ContactRecordController_Roo_Controller {
     void ContactRecordController.populateEditForm(Model uiModel, ContactRecord contactRecord) {
         uiModel.addAttribute("contactRecord", contactRecord);
         uiModel.addAttribute("leadsources", Arrays.asList(LeadSource.values()));
-        uiModel.addAttribute("statuses", Arrays.asList(Status.values()));
+        uiModel.addAttribute("leadstatuses", Arrays.asList(LeadStatus.values()));
         uiModel.addAttribute("actionplans", ActionPlan.findAllActionPlans());
         uiModel.addAttribute("notes", Note.findAllNotes());
     }

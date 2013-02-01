@@ -18,8 +18,8 @@
         <field:input field="state" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_state" z="sPQgPPbP3QVGNUYwLyXQ5o12KhQ="/>
         <field:input field="zip" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_zip" validationMessageCode="field_invalid_integer" z="WszSb+O6gyLxQZ6RSdnV8B61Inc="/>
         <field:simple field="notes" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_notes" messageCode="entity_reference_not_managed" messageCodeAttribute="Note" z="D3f33l5faSXxEmkDbngvPuQ2DWk="/>
-        <field:select field="status" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_status" items="${statuses}" path="statuses" z="x0BwOpREoIAAfDgwekJhYxYR+jA="/>
         <field:select field="leadSource" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_leadSource" items="${leadsources}" path="leadsources" z="WZMSVTxHKxILYmdAArZxYCf9ubg="/>
         <field:simple field="actionPlans" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_actionPlans" messageCode="entity_reference_not_managed" messageCodeAttribute="Action Plan" z="zbHeMOSoesQHLz8xkl5RytOBeOM="/>
+        <field:select field="status" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_status" items="${leadstatuses}" path="leadstatuses" z="GX8/uGcmZV7NUa/x6Dht4Poy87E="/>
     </form:update>
 </div>

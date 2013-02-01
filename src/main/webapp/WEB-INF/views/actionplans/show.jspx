@@ -4,6 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_atomicaxis_ctlg_app_domain_ActionPlan" object="${actionplan}" path="/actionplans" z="hXamRHzrAHKhwByTWegqCdLdN6c=">
         <field:display field="contactRecord" id="s_com_atomicaxis_ctlg_app_domain_ActionPlan_contactRecord" object="${actionplan}" z="QnxqHjPosWU9PvMyYRs+Zb4VCcs="/>
-        <field:display field="name" id="s_com_atomicaxis_ctlg_app_domain_ActionPlan_name" object="${actionplan}" z="2psDkixkGW03EPZhG4cXvC43QvE="/>
+        <field:display field="title" id="s_com_atomicaxis_ctlg_app_domain_ActionPlan_title" object="${actionplan}" z="2/+Tye2/AJ4iX5tssLbHw8tm+nY="/>
+        <field:display field="status" id="s_com_atomicaxis_ctlg_app_domain_ActionPlan_status" object="${actionplan}" z="cftdddAmNCGAkzIFXhq3dnWeAO4="/>
+        <field:display date="true" dateTimePattern="${actionPlan_updated_date_format}" field="updated" id="s_com_atomicaxis_ctlg_app_domain_ActionPlan_updated" object="${actionplan}" z="wCI6kIfw5nucqwAIWA+1/SenDSA="/>
+        <field:display date="true" dateTimePattern="${actionPlan_duedate_date_format}" field="dueDate" id="s_com_atomicaxis_ctlg_app_domain_ActionPlan_dueDate" object="${actionplan}" z="U082aJ53qZwAvCo7dPgeoP6nBYs="/>
     </page:show>
 </div>

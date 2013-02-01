@@ -16,11 +16,11 @@
         <field:input field="city" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_city" max="30" min="7" z="user-managed"/>
         <field:input field="state" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_state" max="30" min="7" z="user-managed"/>
         <field:input field="zip" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_zip" validationMessageCode="field_invalid_integer" z="WszSb+O6gyLxQZ6RSdnV8B61Inc="/>
-        <field:select field="status" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_status" items="${statuses}" path="statuses" z="x0BwOpREoIAAfDgwekJhYxYR+jA="/>
         <field:select field="leadSource" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_leadSource" items="${leadsources}" path="leadsources" z="WZMSVTxHKxILYmdAArZxYCf9ubg="/>
         <field:input field="name" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_name" z="tFoJCtDnXn03btotYJyvIK8dC1c="/>
         <field:simple field="notes" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_notes" messageCode="entity_reference_not_managed" messageCodeAttribute="Note" z="D3f33l5faSXxEmkDbngvPuQ2DWk="/>
         <field:simple field="actionPlans" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_actionPlans" messageCode="entity_reference_not_managed" messageCodeAttribute="Action Plan" z="zbHeMOSoesQHLz8xkl5RytOBeOM="/>
+        <field:select field="status" id="c_com_atomicaxis_ctlg_app_domain_ContactRecord_status" items="${leadstatuses}" path="leadstatuses" z="GX8/uGcmZV7NUa/x6Dht4Poy87E="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atomicaxis_ctlg_app_domain_ContactRecord" render="${not empty dependencies}" z="AC+F4ulkChTqUXEzVDuP0CxkWhA="/>
 </div>

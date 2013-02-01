@@ -55,3 +55,27 @@ web mvc all --package ~.web
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-28 18:30:43
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-28 18:30:52
 controller class --class ~.controller.PublicAPI --preferredMapping /service
+focus --class ~.domain.ActionPlan
+field date --fieldName dueDate --type java.util.Date --notNull true
+enum type --class ~.common.ActionStatus
+// [failed] enum constant --name OPEN
+enum constant --name OPEN --permitReservedWords 
+enum constant --name CLOSED --permitReservedWords 
+focus --class ~.domain.ActionPlan
+field enum --fieldName status --type ~.common.ActionStatus
+focus --class ~.domain.ActionPlan
+field date --fieldName dueDate --type java.util.Date
+finder list --class ~.domain.ActionPlan --depth 2
+finder list --class ~.domain.ActionPlan --depth 2 --filter project
+finder list --class ~.domain.ActionPlan --depth 2 --filter project
+finder list --class ~.domain.ActionPlan --depth 2 --filter Project
+focus --class ~.domain.ContactRecord
+// [failed] field set --fieldName actionPlans --type ~.domain.ActionPlan --cardinality ONE_TO_MANY 
+focus --class ~.domain.ActionPlan
+// [failed] field reference --fieldName contactRecord --type ~.domain.ContactRecord --cardinality MANY_TO_ONE 
+finder list --class ~.domain.ActionPlan --depth 1
+finder add --finderName findActionPlansByContactRecord
+focus --class ~.domain.ActionPlan
+field date --fieldName thisone --type java.util.Calendar
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-31 12:47:20
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-31 12:47:32

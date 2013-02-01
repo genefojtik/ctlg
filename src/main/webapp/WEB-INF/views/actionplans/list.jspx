@@ -5,7 +5,11 @@
     <page:list id="pl_com_atomicaxis_ctlg_app_domain_ActionPlan" items="${actionplans}" z="jB3r8QC7gLtXQ3yNXh/uaLXYu6s=">
         <table:table data="${actionplans}" id="l_com_atomicaxis_ctlg_app_domain_ActionPlan" path="/actionplans" z="RlopLYqPvfoYw2CsLBNrLOsSqps=">
             <table:column id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_contactRecord" property="contactRecord" z="demmuRHeQ+5Dd3Frmed0gquD9yY="/>
-            <table:column id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_name" property="name" z="/VJfmas2yTXPWqaAwGJQlVcR7vQ="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_title" property="title" z="2nK5ylcUiclQD2MaLCyJOMTG4c8="/>
+            <table:column id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_status" property="status" z="YBFEBWOt/dvEJOxxI/k12aXqSyU="/>
+            <table:column date="true" dateTimePattern="${actionPlan_created_date_format}" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_created" property="created" z="sbASV7yTGk5apGTCdlRzKBit+dg="/>
+            <table:column date="true" dateTimePattern="${actionPlan_updated_date_format}" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_updated" property="updated" z="1bVutSwGxpbmR8QxoUJUxRVnjNQ="/>
+            <table:column date="true" dateTimePattern="${actionPlan_duedate_date_format}" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_dueDate" property="dueDate" z="6AmekwHKPt3uCJJU6mfbE2ytKZw="/>
         </table:table>
     </page:list>
 </div>

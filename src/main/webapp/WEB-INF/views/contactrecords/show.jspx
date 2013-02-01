@@ -17,7 +17,7 @@
         <field:display field="city" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_city" object="${contactrecord}" z="lVJBveFD52N7NPWZ11Qn4Aw3IBs="/>
         <field:display field="state" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_state" object="${contactrecord}" z="D0qVlqnM+mNzZj1OXtIT6kfJqk4="/>
         <field:display field="zip" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_zip" object="${contactrecord}" z="r3X6aP1r6pzFPSAm6zNvvqnMQfc="/>
-        <field:display field="status" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_status" object="${contactrecord}" z="7njU2wTcr5P64jhZYyjeSrwrd1I="/>
         <field:display field="leadSource" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_leadSource" object="${contactrecord}" z="pU964Q4p0Wu4TSZseTC8zmjTGQ0="/>
+        <field:display field="status" id="s_com_atomicaxis_ctlg_app_domain_ContactRecord_status" object="${contactrecord}" z="7njU2wTcr5P64jhZYyjeSrwrd1I="/>
     </page:show>
 </div>

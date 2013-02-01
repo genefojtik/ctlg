@@ -4,7 +4,10 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_atomicaxis_ctlg_app_domain_ActionPlan" modelAttribute="actionPlan" path="/actionplans" render="${empty dependencies}" z="2t8cflXx8+3Fcg67sxkcCyX9F6Q=">
         <field:select field="contactRecord" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_contactRecord" itemValue="id" items="${contactrecords}" path="/contactrecords" z="94PhtrB6XWgG3/t68dCPSZnzfrg="/>
-        <field:input field="name" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_name" z="AQKfvK9I8KxmhseA54BDnLrJXos="/>
+        <field:input field="title" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_title" z="NZyKHZtPIeGjZugelab9fCKkszA="/>
+        <field:select field="status" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_status" items="${actionstatuses}" path="actionstatuses" z="+lgRSgnggoj1fqHyacJQR/Jlp3k="/>
+        <field:datetime dateTimePattern="${actionPlan_updated_date_format}" field="updated" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_updated" z="IO22btmy4muoLHjeS+xgaLwLmls="/>
+        <field:datetime dateTimePattern="${actionPlan_duedate_date_format}" field="dueDate" id="c_com_atomicaxis_ctlg_app_domain_ActionPlan_dueDate" z="MdKaAQNpsb6XHY+fBkTne6cF/RI="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atomicaxis_ctlg_app_domain_ActionPlan" render="${not empty dependencies}" z="l5fTJbSpNfLcR5DclJHylpNx2KA="/>
 </div>

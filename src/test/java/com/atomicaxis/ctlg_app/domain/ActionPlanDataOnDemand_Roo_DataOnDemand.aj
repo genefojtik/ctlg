@@ -3,11 +3,15 @@
 
 package com.atomicaxis.ctlg_app.domain;
 
+import com.atomicaxis.ctlg_app.common.ActionStatus;
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ActionPlanDataOnDemand;
 import com.atomicaxis.ctlg_app.domain.ContactRecordDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -29,13 +33,37 @@ privileged aspect ActionPlanDataOnDemand_Roo_DataOnDemand {
     
     public ActionPlan ActionPlanDataOnDemand.getNewTransientActionPlan(int index) {
         ActionPlan obj = new ActionPlan();
-        setName(obj, index);
+        setCreated(obj, index);
+        setDueDate(obj, index);
+        setStatus(obj, index);
+        setTitle(obj, index);
+        setUpdated(obj, index);
         return obj;
     }
     
-    public void ActionPlanDataOnDemand.setName(ActionPlan obj, int index) {
-        String name = "name_" + index;
-        obj.setName(name);
+    public void ActionPlanDataOnDemand.setCreated(ActionPlan obj, int index) {
+        Date created = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setCreated(created);
+    }
+    
+    public void ActionPlanDataOnDemand.setDueDate(ActionPlan obj, int index) {
+        Date dueDate = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setDueDate(dueDate);
+    }
+    
+    public void ActionPlanDataOnDemand.setStatus(ActionPlan obj, int index) {
+        ActionStatus status = ActionStatus.class.getEnumConstants()[0];
+        obj.setStatus(status);
+    }
+    
+    public void ActionPlanDataOnDemand.setTitle(ActionPlan obj, int index) {
+        String title = "title_" + index;
+        obj.setTitle(title);
+    }
+    
+    public void ActionPlanDataOnDemand.setUpdated(ActionPlan obj, int index) {
+        Date updated = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setUpdated(updated);
     }
     
     public ActionPlan ActionPlanDataOnDemand.getSpecificActionPlan(int index) {
