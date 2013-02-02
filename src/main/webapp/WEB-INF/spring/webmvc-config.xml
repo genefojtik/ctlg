@@ -24,14 +24,15 @@
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang"/>
         
 		<!--  GFojtik added custom interceptor -->
-        <bean id="loggerInterceptor" class="com.atomicaxis.ctlg_app.interceptor.LoggerInterceptor" />
+        <bean class="com.atomicaxis.ctlg_app.interceptor.LoggerInterceptor" id="loggerInterceptor"/>
     
     </mvc:interceptors>
     
     <!--  GFojtik added custom interceptor -->
-    <bean id="performanceInterceptor" class="com.atomicaxis.ctlg_app.interceptor.PerformanceInterceptor" />
+    <bean class="com.atomicaxis.ctlg_app.interceptor.PerformanceInterceptor" id="performanceInterceptor"/>
 
     <!-- Selects a static view for rendering without the need for an explicit controller -->
+    <mvc:view-controller path="/login"/>
     <mvc:view-controller path="/" view-name="index"/>
     <mvc:view-controller path="/uncaughtException"/>
     <mvc:view-controller path="/resourceNotFound"/>
@@ -67,7 +68,7 @@
 
   <!--  GFojtik added custom interceptor -->
   
-  <bean name="proxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+  <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" name="proxyCreator">
     <property name="beanNames">
         <list>
             <value>*Controller</value>          

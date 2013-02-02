@@ -95,4 +95,16 @@ public class PublicApiController {
         return new ResponseEntity<String>(ActionPlan.toJsonArrayShallow(ActionPlan.findActionPlansByContactRecord(contactRecord).getResultList()), headers, HttpStatus.OK);
     }
     
+	@RequestMapping(value = "/contactrecord/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> deleteFromJson(@PathVariable("id") Long id) {
+        ContactRecord contactRecord = ContactRecord.findContactRecord(id);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        if (contactRecord == null) {
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        contactRecord.remove();
+        return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
+	
 }
