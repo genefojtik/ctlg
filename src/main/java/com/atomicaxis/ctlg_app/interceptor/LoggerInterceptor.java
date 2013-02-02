@@ -1,8 +1,16 @@
 /*
+ * LoggerInterceptor 
+ * 
+ * Company: Atomic Axis
+ *
+ * Author:
+ * Gene Fojtik
+ *
+ * Date:
+ * 20120131
+/*
  * This code is Copyright (c) 2013 Atomic Axis. All rights reserved.
  * You are not allowed to remember or reproduce anything you read below.
- * Author: Gene Fojtik
- * Date: 1/21/2013 
  * 
  */
 

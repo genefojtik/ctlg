@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.atomicaxis.ctlg_app.domain.MarketingDataIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 sec
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 sec

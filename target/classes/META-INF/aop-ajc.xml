@@ -1,8 +1,7 @@
 <aspectj>
 <aspects>
-<aspect name="com.atomicaxis.ctlg_app.ContactRecordController_Roo_Controller_Json"/>
+<aspect name="com.atomicaxis.ctlg_app.web.MarketingDataController_Roo_Controller_Json"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.Note_Roo_ToString"/>
-<aspect name="com.atomicaxis.ctlg_app.ActionPlanController_Roo_Controller_Json"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingData_Roo_Jpa_Entity"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingData_Roo_Json"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_Jpa_Entity"/>
@@ -10,23 +9,24 @@
 <aspect name="com.atomicaxis.ctlg_app.domain.Note_Roo_Jpa_Entity"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_Finder"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecord_Roo_Json"/>
-<aspect name="com.atomicaxis.ctlg_app.ActionPlanController_Roo_Controller"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_Configurable"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.Note_Roo_JavaBean"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_Jpa_ActiveRecord"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingData_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.atomicaxis.ctlg_app.web.ContactRecordController_Roo_Controller"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecord_Roo_Jpa_Entity"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecord_Roo_ToString"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_JavaBean"/>
-<aspect name="com.atomicaxis.ctlg_app.ContactRecordController_Roo_Controller"/>
+<aspect name="com.atomicaxis.ctlg_app.web.ContactRecordController_Roo_Controller_Json"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.Note_Roo_Configurable"/>
-<aspect name="com.atomicaxis.ctlg_app.MarketingDataController_Roo_Controller_Json"/>
+<aspect name="com.atomicaxis.ctlg_app.web.MarketingDataController_Roo_Controller"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_Json"/>
+<aspect name="com.atomicaxis.ctlg_app.web.ActionPlanController_Roo_Controller_Json"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingData_Roo_ToString"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.Note_Roo_Jpa_ActiveRecord"/>
 <aspect name="com.atomicaxis.ctlg_app.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.MarketingData_Roo_Configurable"/>
-<aspect name="com.atomicaxis.ctlg_app.MarketingDataController_Roo_Controller"/>
+<aspect name="com.atomicaxis.ctlg_app.web.ActionPlanController_Roo_Controller"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ActionPlan_Roo_ToString"/>
 <aspect name="com.atomicaxis.ctlg_app.web.NoteController_Roo_Controller"/>
 <aspect name="com.atomicaxis.ctlg_app.domain.ContactRecord_Roo_JavaBean"/>

@@ -1,4 +1,4 @@
-package com.atomicaxis.ctlg_app;
+package com.atomicaxis.ctlg_app.web;
 
 import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;

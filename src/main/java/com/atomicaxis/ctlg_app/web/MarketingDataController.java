@@ -1,4 +1,4 @@
-package com.atomicaxis.ctlg_app;
+package com.atomicaxis.ctlg_app.web;
 
 import com.atomicaxis.ctlg_app.domain.MarketingData;
 import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;

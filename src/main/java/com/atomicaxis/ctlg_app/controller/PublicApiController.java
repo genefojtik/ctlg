@@ -1,3 +1,15 @@
+/*
+ * PublicApiController
+ * 
+ * Company: Atomic Axis
+ *
+ * Author:
+ * Gene Fojtik
+ *
+ * Date:
+ * 20120131
+ */
+
 package com.atomicaxis.ctlg_app.controller;
 
 import java.util.Collection;
@@ -22,34 +34,37 @@ import com.atomicaxis.ctlg_app.domain.ActionPlan;
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import flexjson.JSONSerializer;
 
+/**
+ * This controller handles all RESTful requests GET/POST/PUT/DELETE on 
+ * the ContactRecord Entity, including it's child objects 
+ * 
+ */
 @RequestMapping("/services")
 @Controller
 public class PublicApiController {
 
-
-    @RequestMapping(method = RequestMethod.POST, value = "{id}")
-    public void post(@PathVariable Long id, ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
-    }
-
     @RequestMapping
     public String index() {
-        return "service/index";
+         	
+    	return "service/index"; 
     }
     
+    /**
+	 * This method returns the a JSONArray of all ContactRecords and it's child objects
+	 */
     @RequestMapping(value = "/contactrecord", headers = "Accept=application/json", produces="application/json")
     @ResponseBody
     public ResponseEntity<String> getContactRecord(){
     	HttpHeaders headers = new HttpHeaders();
     	headers.add("Access-Control-Allow-Origin", "*");
-    	//headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     	List<ContactRecord> result = ContactRecord.findAllContactRecords();
-    	
-    	
-    	
 		return new ResponseEntity<String>(ContactRecord.toJsonArray(result), headers, HttpStatus.OK);
 		
     }
     
+    /**
+	 * This method returns JSON of the specified contactRecordId and it's child objects
+	 */
     @RequestMapping(value = "/contactrecord/{id}", headers = "Accept=application/json", produces="application/json")
     @ResponseBody
     public ResponseEntity<String> getContactRecordByID(@PathVariable("id") Long id){
@@ -64,6 +79,9 @@ public class PublicApiController {
         return new ResponseEntity<String>(contactRecord.toJson(), headers, HttpStatus.OK);
     }   
     
+    /**
+	 * This method accepts POST requests againts the contactRecord to create a new contactRecord
+	 */
     @RequestMapping(value ="/contactrecord", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createContactRecord(@RequestBody String json) {
         ContactRecord contactRecord = ContactRecord.fromJsonToContactRecord(json);
@@ -73,6 +91,9 @@ public class PublicApiController {
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
     
+    /**
+	 * This method accepts POST requests to create multiple contactRecords
+	 */
     @RequestMapping(value = "/contactrecord/jsonArray", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createContactRecordFromJsonArray(@RequestBody String json) {
         for (ContactRecord contactRecord: ContactRecord.fromJsonArrayToContactRecords(json)) {
@@ -83,9 +104,9 @@ public class PublicApiController {
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
     
-    /* 
-     * 
-     */
+    /**
+	 * This method accepts POST requests to get the action plans for a specific contactRecord
+	 */
 	@RequestMapping(value = "/contactrecord/{id}/actionplans", headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> getActionPlansByContactRecordId(@PathVariable("id") Long id) {
@@ -95,6 +116,9 @@ public class PublicApiController {
         return new ResponseEntity<String>(ActionPlan.toJsonArrayShallow(ActionPlan.findActionPlansByContactRecord(contactRecord).getResultList()), headers, HttpStatus.OK);
     }
     
+	/**
+	 * This method accepts DELETE requests to delete the contractRecord
+	 */
 	@RequestMapping(value = "/contactrecord/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
     public ResponseEntity<String> deleteFromJson(@PathVariable("id") Long id) {
         ContactRecord contactRecord = ContactRecord.findContactRecord(id);

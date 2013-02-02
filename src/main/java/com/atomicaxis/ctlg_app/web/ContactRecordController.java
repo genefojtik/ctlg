@@ -1,4 +1,4 @@
-package com.atomicaxis.ctlg_app;
+package com.atomicaxis.ctlg_app.web;
 
 import com.atomicaxis.ctlg_app.domain.ContactRecord;
 import org.springframework.http.HttpHeaders;

@@ -1,3 +1,16 @@
+/*
+ * Note Entity
+ * 
+ * Company: Atomic Axis
+ *
+ * Author:
+ * Gene Fojtik
+ *
+ * Date:
+ * 20120131
+ */
+
+
 package com.atomicaxis.ctlg_app.domain;
 
 import java.sql.Timestamp;
