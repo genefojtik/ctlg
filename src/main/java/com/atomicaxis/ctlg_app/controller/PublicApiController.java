@@ -22,6 +22,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -82,6 +83,7 @@ public class PublicApiController {
     /**
 	 * This method accepts POST requests againts the contactRecord to create a new contactRecord
 	 */
+   
     @RequestMapping(value ="/contactrecord", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createContactRecord(@RequestBody String json) {
         ContactRecord contactRecord = ContactRecord.fromJsonToContactRecord(json);
@@ -90,7 +92,7 @@ public class PublicApiController {
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
-    
+
     /**
 	 * This method accepts POST requests to create multiple contactRecords
 	 */
@@ -115,7 +117,22 @@ public class PublicApiController {
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(ActionPlan.toJsonArrayShallow(ActionPlan.findActionPlansByContactRecord(contactRecord).getResultList()), headers, HttpStatus.OK);
     }
-    
+	
+	/**
+	 * This method accepts PUT requests to delete the contractRecord
+	 */
+    @RequestMapping(value = "/contactrecord/{id}",method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> updateContactRecord(@RequestBody String json) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+    	ContactRecord contactRecord = ContactRecord.fromJsonToContactRecord(json);
+        if (contactRecord.merge() == null) {
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
+	
+	
 	/**
 	 * This method accepts DELETE requests to delete the contractRecord
 	 */
@@ -130,5 +147,4 @@ public class PublicApiController {
         contactRecord.remove();
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
-	
 }

@@ -67,7 +67,7 @@ privileged aspect ContactRecordController_Roo_Controller_Json {
         }
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
-    
+      
     @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> ContactRecordController.updateFromJsonArray(@RequestBody String json) {
         HttpHeaders headers = new HttpHeaders();
